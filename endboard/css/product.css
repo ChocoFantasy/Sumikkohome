@@ -1,0 +1,154 @@
+/* 重置所有margin及padding */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* body 設定背景圖(色) */
+body {
+    background-color: #FFF1CF;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+
+/* 網頁內容最外層包裝, 主要是用margin來做左右置中 */
+#wrapper {
+    background-color: #FFF1CF;
+    width: 2000px;
+    margin: 0 auto;
+}
+/* =======標題區======== */
+
+#header {
+    height: 200px;
+    position: relative;
+    background-color: #EBFFCF;
+}
+
+#header p {
+    float:left;
+    background-color: #FFC694;
+    display: inline-block;
+    color: #fff;
+    font-size: 50px;
+    font-weight: normal;
+    margin: 0;
+    text-align: left;
+    width: 400px;
+}
+
+#header  span {
+    background-color: #7C7C7C;
+    display: inline-block;
+    font-size: 50px;
+    padding: 10px;
+}
+
+/* =======左側選單區======== */
+#Leftside {
+  
+    width: 300px;
+    height: auto;
+    float: left;
+    background-color:#DCFFC3;
+}
+
+#Leftside ul{ 
+    list-style:none
+}
+
+#form{
+    
+    border:3px solid #AAAAAA; 
+}
+
+#hot ol{border: 2px dotted #FF7061; }
+        /* 利用右框線表示投票數 */
+#hot li{ 
+            margin: 3px; 
+            width:  8em;
+            border-right-style: solid;
+            border-right-color: #FBC2B9;
+            list-style:none;
+        }
+        /* 建立 3 個 keyframes, 分別設定不同的框線寬度 */
+        @keyframes bar1 {
+            from {
+                border-right-width: 0px
+            }
+            to {
+                border-right-width: 150px
+            }
+        }
+        @keyframes bar2 {
+            from {
+                border-right-width: 0px
+            }
+            to {
+                border-right-width: 100px
+            }
+        }
+        @keyframes bar3 {
+            from {
+                border-right-width: 0px
+            }
+            to {
+                border-right-width: 50px
+            }
+        }
+        
+        /* 
+           用 id 選擇器建立所要的動畫效果 
+           各動畫時間長度不同, 都只會執行 1 次
+        */
+        #sleep {
+            animation: bar1 2s ease;
+            border-right-width: 150px
+        }
+        
+        #book123 {
+            animation: bar2 1.5s ease-out;
+            border-right-width: 100px
+        }
+        
+        #note {
+            animation: bar3 1s ease-in;
+            border-right-width: 50px
+        }
+
+/* =======內容區======== */
+#rightside {
+    
+    width: 1700px;
+    float: left;
+    background-color: #E5E8BC;
+    font-size: large;
+            
+
+}
+#rightside input {text-align:right;
+    width:3em;}
+
+#rightside img{
+   width:500px; 
+}
+/* =======版權宣告區======== */
+#Lowerside {
+    clear: both;
+    background-color:darkgray;
+}
+
+#Lowerside p{
+    height:50px;
+    font-weight:normal;
+    font-size:12px;
+    text-align:center;
+    color:#FFF;
+    line-height:50px;
+}
+
+#footer img{
+    width: 100px;
+    height:100px;
+    float: right;
+}

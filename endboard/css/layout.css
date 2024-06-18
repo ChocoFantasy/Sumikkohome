@@ -1,0 +1,198 @@
+/* 重置所有margin及padding */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* 不加這一段 右邊的行數會排到左邊的下面 */
+* {
+    box-sizing: border-box;
+}
+
+/* body 設定背景圖(色) */
+body {
+    background-color: #FF6347;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+#topnav {
+    overflow: hidden;
+    background-color: #7C7C7C;
+    color: #FFFFFF;
+    font-size: 50px;
+}
+
+/* 網頁內容最外層包裝, 主要是用margin來做左右置中 */
+#wrapper {
+    margin: 0 auto;
+    width: 1500px;
+    background-color: #ffeedd;
+}
+
+/* 以下是做佈局的設定 */
+/* =======標題區======== */
+
+#header ul {
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+#header li {
+    list-style-type: none;
+    float: left;
+}
+
+#header li a {
+    font-family: 'Noto Sans TC', sans-serif;
+    display: block;
+    font-size: 30px;
+    width: 300px;
+    height: 100px;
+    line-height: 100px;
+    text-decoration: none;
+    color: #880000;
+    background-color: #FFC8B4;
+    text-align: center;
+}
+
+#header li a:hover {
+    background-color: #FFE4E1;
+}
+
+/* =======輪播區======== */
+#all img {
+    height: 500px;
+    width: 1500px;
+}
+
+#COA {
+    clear: left;
+}
+
+.selected {
+    background-color: darksalmon;
+}
+
+#thumbs {
+    position: relative;
+    top: 10px;
+    left: 450px;
+    /*區塊置中*/
+}
+
+.small {
+    width: 70px;
+    float: left;
+    margin: 2px;
+    padding: 3px;
+    border: 0.5px black solid;
+}
+
+#viewer {
+    width: 1500px;
+    overflow: hidden;
+    /* 將超出範圍的內容隱藏 */
+    
+}
+
+#all {
+    width: 9000px;
+    /* 容納全部大圖的區塊   */
+    height: 500px;
+    position: relative;
+    /* 使用相對定位  */
+}
+
+
+/* =======角落生物小故事區======== */
+
+.Story1 {
+    clear: left;
+    display: block;
+    position: relative;
+    top: 10px;
+    padding: 20px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 20px;
+
+}
+
+/* =======文字樣式Welcome區======== */
+.Font1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    color: #F16A57;
+    text-align: center;
+}
+
+
+
+/* =======新訊快報區======== */
+
+#News {
+    width: 55%;
+    float: left;
+    padding-left: 15px;
+    margin: 20px;
+    padding: 10px 10px 10px 40px;
+}
+
+
+#News ul {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+
+/* =======新訊右側選單區======== */
+#imga {
+    width: 40%;
+    float: left;
+}
+
+#imga img {
+    float: left;
+    position: relative;
+    top: 30px;
+   
+    width: 200px;
+
+}
+
+
+/* =======新增建議區======== */
+#Suggest {
+    width: 55%;
+    clear: left;
+}
+
+#Suggest option {
+    width:200px;
+}
+/* =======FB IG LINE區======== */
+#Community {
+    position: relative;
+    top:-10px;
+    right:-100px;
+    width: 30%;
+    float:right;
+}
+#Community img{
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+/* =======個人資料區======== */
+#footer {
+    clear: both;
+}
+#footer img {
+    width: 100%;
+    
+}
+
+
+
+}

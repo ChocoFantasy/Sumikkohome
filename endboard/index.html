@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>角落生物之家</title>
+    <link href="css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+</head>
+<script>
+
+    $(function onload(id) {
+        if(id="COA"){
+         $(function(){
+        var timer;    // 計時器變數
+        
+        // 為每張縮圖製作一個大圖的 img 標籤, 並加到 #all 區塊中
+        $('.small').each(function() {
+            var tag = $('<img></img>');    // 建立 img 元素
+            tag.attr('src', 
+            $(this).attr('src')); // 複製縮圖的 src 屬性
+            $('#all').append(tag);         // 附加元素
+        });
+        
+        // 設定縮圖的按下事件處理器
+        $('.small').click(function(){
+            clearTimeout(timer);    // 清除計時器
+            
+            // 取消上張縮圖的選取圖框
+            $('.selected').toggleClass('selected');
+            
+            // 將被按的縮圖加上選取圖框
+            $(this).toggleClass('selected');
+            
+            // 計算要移動的位置
+			var pos=$('.small').index(this)* -1500;
+            $('#all').animate({'left':pos+'px'},'liner');
+            
+            // 索引值加 1 表示下一張縮圖
+            var next = $('.small').index(this) + 1;
+            
+            // 若索引值超過範圍, 則設為0, 表示再重頭開始播放
+            if(next == $('.small').length) next=0; 
+            
+            // 設定 3 秒後觸發下一張縮圖的 click 事件
+            timer=setTimeout(function(){
+              $('.small')[next].click()
+             }, 3000);
+        });
+        
+        //一開始先選第 1 張縮圖
+        $('.small')[0].click()
+      });
+        }
+    });
+            
+            
+    
+    $(function Newss() {
+        if(id="News"){
+                // 設定 a 元素滑鼠進入事件處理器
+                $('a').mouseenter(function() {
+                    // 將事件元素設為粗體
+                    $(this).css('font-weight', 'bold');
+                });
+
+                // 設定 a 元素滑鼠離開事件處理器
+                $('a').mouseleave(function() {
+                    // 將事件元素設為一般字體 
+                    $(this).css('font-weight', 'normal');
+                });
+            }
+        });
+    
+    $(function Suggest() {
+        if(id="Suggest"){
+             // 指定按鍵的 click 事件處理函式
+            $('button').click(function (){
+            if ($('#Suggestt').val()=='' || $('#Suggestt').val()=='0'){
+                 alert("輸入不能為空");
+                 return;
+             }
+            // 附加新的 li 子元素, 子元素內容為輸入欄位值
+            $('#list').append('<option>'+$('#Suggestt').val()+'</option>');
+      
+            $('#Suggestt').val(''); // 清空輸入欄位內容
+      
+            // 顯示 (更新) 清單項目的數量
+            $("#SuggesttCount").text($('#list option').length);
+            });
+            
+            
+        }
+     });
+   
+    
+</script>
+
+<body>
+    <div id="wrapper">
+       
+        <div id="topnav"><a href="index.html"><img src="images/HOME.png" alt=home witch="100" height="100"></a>
+            歡迎來到~~角落生物之家
+        </div>
+        <div id="header">
+            <ul>
+                <li><a href="story.html">角落故事屋</a></li>
+                <li><a href="product.html">商品頁</a></li>
+                <li><a href="picturelook.html">圖片欣賞</a></li>
+                <li><a href="services.html">角落相關服務地點</a></li>
+                <li><a href="member.html">申請會員</a></li>
+            </ul>
+        </div>
+        <div id="COA">
+            <script>
+                onload(COA);
+            </script>
+            <div id="viewer">
+                <!-- 限制顯示寬度的區塊 -->
+                <div id="all">
+                    <!-- 用來容納全部大圖的區塊 -->
+                </div>
+            </div>
+            <div id="thumbs">
+                <img class="small" src="images/11/01.jpg">
+                <img class="small" src="images/11/02.jpg">
+                <img class="small" src="images/11/03.jpg">
+                <img class="small" src="images/11/04.jpg">
+                <img class="small" src="images/11/05.jpg">
+                <img class="small" src="images/11/06.jpg">
+            </div>
+        </div>
+        <div class="Story1">
+            <form>
+                <FieldSet>
+                    <Legend>角落生物小故事</Legend>
+                    <p>角落小夥伴（日語：すみっコぐらし），又名角落生物，<br>
+                        是由日本企業San-X所創造出的擬人角色，其設定為喜歡躲在角落的四周圍。
+                        <br>
+                        其實一開始San-X會設定這群害羞的生物，是因為他們發現,<br>
+                        不少日本人都很喜歡「角落」，<br>
+                        這群生物代表了日本人謙虛、不張揚的個性本質，而只有角落才能讓他們感到冷靜、安心。</p>
+                </FieldSet>
+            </form>
+        </div>
+        <div class="Font1">
+            <pre><em>Welcome To Sumikkogurashi Home!</em></pre>
+            <HR color="#DC143C" size="4">
+            </HR>
+        </div>
+        
+        
+        <div id="News" style="border:5px #FFAC55  dashed">
+            <script>
+                Newss(News);
+            </script>
+            
+            <h1>新訊快報</h1>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=33yCs-2nFVM" target="_blank">史上最厭世!阿滴被妹妹逼著開箱角落生物</a></li>
+                <li><a href="https://zh.wikipedia.org/wiki/%E8%A7%92%E8%90%BD%E5%B0%8F%E5%A4%A5%E4%BC%B4" target="_blank">維基百科也記載著角落生物喔~</a></li>
+                <li><a href="http://pier-2.khcc.gov.tw/home02.aspx?ID=$3001&IDK=2&EXEC=D&DATA=4148&AP=$3001_HISTORY-0" target="_blank">2019年6月22日駁二藝術特區等你來窩角落</a></li>
+                <li><a href="https://www.niusnews.com/=P0vaalg8" target="_blank">8句角落生物名言幫你療癒力補滿！</a></li>
+            </ul>
+        </div>
+           
+        <div id="imga">
+                <a href="https://www.niusnews.com/=P1xobxy5" target="_blank"><img src="images/home_picture/001.jpg" alt="001"></a>
+                <a href="https://www.niusnews.com/=P2se55j6" target="_blank"><img src="images/home_picture/004.jpg" alt="004"></a>
+                <a href="https://www.niusnews.com/=P1lxlnx1" target="_blank"><img src="images/home_picture/003.jpg" alt="003"></a>
+        </div>
+        
+        <div id="Suggest">
+            <p>
+                新增建議：<input id="Suggestt" type="text">
+                <button>送出</button>
+                
+            </p>
+            <p>累計<span id="SuggesttCount">0</span>則建議<p>
+            <select id="list" size=7>
+            </select>
+        </div>
+        <div id="Community">
+            <a href="https://www.facebook.com/SumikkoGurashi.jp/?epa=SEARCH_BOX" target="_blank"><img src="images/att/FB.png" alt="FB"></a>
+            <a href="https://www.instagram.com/sumikkogurashilovers/?hl=zh-tw" target="_blank"><img src="images/att/IG.png" alt="IG"></a>
+            <a href="https://store.line.me/stickershop/product/1062/zh-Hant" target="_blank"><img src="images/att/LINE.png" alt="LINE"></a>
+        </div>
+        
+        <div id="footer">
+            <img src="images/home_picture/footer.png" alt="footer">
+        </div>
+        </div>
+    
+</body>
+
+</html>

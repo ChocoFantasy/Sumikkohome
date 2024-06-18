@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>商品頁</title>
+    <link href="css/product.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+
+            <p><span>角落生物</span>商品頁</p>
+            <div id="footer">
+                <a href="index.html"><img alt="footer" src="images/home_picture/002.png" width="300" height="300"></a>
+            </div>
+
+        </div>
+        <div id="Leftside">
+            <ul>
+                <li><a href="#book">書本</a></li>
+                <li><a href="#Tool">玩偶</a></li>
+                <li><a href="#stationery">文具</a></li>
+                <li><a href="#Life">生活</a></li>
+            </ul>
+            <br>
+            <br>
+            <form id="form">
+                帳號：<input type="text" name="UN"><br>
+                密碼：<input type="password" name="密碼欄位"><br>
+                <input type="submit" name="SB" value="送出">
+            </form>
+            <br>
+            <br>
+            <div id="hot">
+                <h1>熱門商品</h1>
+                <ol>
+                    <li id="sleep">TOP1:<br>貓咪草莓睡衣</li>
+                    <li id="book123">TOP2:<br>角落小夥伴的四季</li>
+                    <li id="note">TOP3:<br>小冊子</li>
+                </ol>
+            </div>
+        </div>
+        <div id="rightside">
+
+            <table border="1" width="100%" id="book">
+                書本：
+                <tr class="row1">
+                    <th width="50%">
+                        <img src="images/product_picture/Book/Book_01.jpg" alt="Book_01" title="Book_01"><br>
+                        <li>角落小夥伴的四季(NT$150)<br>
+                            <input type="number" id="book1" value="0">本</li>
+                    </th>
+                    <th width="50%">
+                        <img src="images/product_picture/Book/Book_02.jfif" alt="Book_02" title="Book_02"><br>
+                        <li>角落小夥伴的名言2(NT$150)<br>
+                            <input type="number" id="book2" value="0">本</li>
+                    </th>
+
+                </tr>
+            </table>
+
+            <table border="1" width="100%" id="Tool">
+                玩偶：
+                <tr class="row1">
+                    <th width="50%">
+                        <img src="images/product_picture/Tool/Tool_01.jpg" alt="Tool_01" title="Tool_01"><br>
+                        <li>貓咪草莓睡衣(NT$100)<br>
+                            <input type="number" id="Tool01" value="0">隻</li>
+                    </th>
+                    <th width="50%">
+                        <img src="images/product_picture/Tool/Tool_02.jpg" alt="Tool_02" title="Tool_02"><br>
+                        <li>角落草莓小屋(NT$100)<br>
+                            <input type="number" id="Tool02" value="0">個</li>
+                    </th>
+                </tr>
+            </table>
+
+            <table border="1" width="100%" id="stationery">
+                文具：
+                <tr class="row1">
+                    <th width="50%">
+                        <img src="images/product_picture/stationery/Stationery_01.jpg" alt="Stationery_01" title="Stationery_01"><br>
+                        <li>便條本(NT$30)<br>
+                            <input type="number" id="Stationery01" value="0">個</li>
+                    </th>
+                    <th width="50%">
+                        <img src="images/product_picture/stationery/Stationery_02.jpg" alt="Stationery_02" title="Stationery_02"><br>
+                        <li>小冊子(NT$30)<br>
+                            <input type="number" id="Stationery02" value="0">個</li>
+                    </th>
+
+                </tr>
+            </table>
+
+            <table border="1" width="100%" id="Life">
+                生活：
+                <tr class="row1">
+                    <th width="50%">
+                        <img src="images/product_picture/Life/Life_01.jfif" alt="Life_01" title="Life_01"><br>
+                        <li>造型水壺(NT$100)<br>
+                            <input type="number" id="Life01" value="0">個</li>
+                    </th>
+                    <th width="50%">
+                        <img src="images/product_picture/Life/Life_02.jpg" alt="Life_02" title="Life_02"><br>
+                        <li>袋子(NT$100)<br>
+                            <input type="number" id="Life02" value="0">個</li>
+                    </th>
+
+                </tr>
+            </table>
+            <p>小計 <span id="subtotal">0</span>元</p><br>
+            企鵝(河童)覺得自己是什麼顏色感到疑惑：<input name="color" type="color" value="#ffff00">(可參加抽獎)<br>
+            <button id="order">訂購</button>
+            <button id="cancel">清除</button>
+            <br>
+            <script type="text/javascript">
+                // var subtotal = document.getElementById("subtotal");
+                var book1 = document.getElementById("book1");
+                var book2 = document.getElementById("book2");
+                var Tool01 = document.getElementById("Tool01");
+                var Tool02 = document.getElementById("Tool02");
+                var Stationery01 = document.getElementById("Stationery01");
+                var Stationery02 = document.getElementById("Stationery02");
+                var Life01 = document.getElementById("Life01");
+                var Life02 = document.getElementById("Life02");
+                var book1s = 0,
+                    book2s = 0,
+                    Tool1s = 0,
+                    Tool2s = 0,
+                    Stationery1s = 0,
+                    Stationery2s = 0,
+                    Life1s = 0,
+                    Life2s = 0,
+                    money = 0;
+
+                // 用匿名函式設定 '清除' 鈕的動作
+                document.getElementById("cancel").onclick =
+                    function() {
+                        book1.value = 0;
+                        book2.value = 0;
+                        Tool01.value = 0;
+                        Tool02.value = 0;
+                        Stationery01.value = 0;
+                        Stationery02.value = 0;
+                        Life01.value = 0;
+                        Life02.value = 0;
+
+                        book1s = 0;
+                        book2s = 0;
+                        Tool1s = 0;
+                        Tool2s = 0;
+                        Stationery1s = 0;
+                        Stationery2s = 0;
+                        Life1s = 0;
+                        Life2s = 0;
+                    };
+
+                // 用匿名函式設定 '訂購' 鈕的動作
+                var btnOrder = document.getElementById("order").onclick =
+                    function() {
+                        if (money == 0) return; // 金額為 0 時不處理
+                        var msg = "";
+                        if (book1s > 0) msg += "角落小夥伴的四季" + book1s + "本\n";
+                        if (book2s > 0) msg += "角落小夥伴的名言2" + book2s + "本\n";
+                        if (Tool1s > 0) msg += "貓咪草莓睡衣" + Tool1s + "隻\n";
+                        if (Tool2s > 0) msg += "角落草莓小屋" + Tool2s + "個\n";
+                        if (Stationery1s > 0) msg += "便條本" + Stationery1s + "個\n";
+                        if (Stationery2s > 0) msg += "小冊子" + Stationery2s + "個\n";
+                        if (Life1s > 0) msg += "造型水壺" + Life1s + "個\n";
+                        if (Life2s > 0) msg += "袋子" + Life2s + "個\n";
+                        msg += "總共 " + (book1s + book2s + Tool1s + Tool2s + Stationery1s + Stationery2s + Life1s + Life2s) +
+                            " 個, " + money + "元";
+                        alert(msg);
+                    };
+
+                // 將兩個輸入欄位的change事件處理器都設為 calc() 函式
+                book1.addEventListener('change', calc);
+                book2.addEventListener('change', calc);
+                Tool01.addEventListener('change', calc);
+                Tool02.addEventListener('change', calc);
+                Stationery01.addEventListener('change', calc);
+                Stationery02.addEventListener('change', calc);
+                Life01.addEventListener('change', calc);
+                Life02.addEventListener('change', calc);
+
+
+                function calc(e) {
+                    console.log(this); // 在主控台顯示 this 物件
+
+                    var Numbers = parseInt(this.value); // 取得個數
+
+                    if (this == book1) { // 若欄位
+                        if (Numbers < 0) // 若個數為負數
+                            this.value = book1; // 將欄位值回負為舊值
+                        else
+                            book1s = Numbers;
+                    } else if (this == book2) {
+                        if (Numbers < 0)
+                            this.value = book2;
+                        else
+                            book2s = Numbers;
+                    } else if (this == Tool01) {
+                        if (Numbers < 0)
+                            this.value = Tool01;
+                        else
+                            Tool1s = Numbers;
+                    } else if (this == Tool02) {
+                        if (Numbers < 0)
+                            this.value = Tool02;
+                        else
+                            Tool2s = Numbers;
+                    } else if (this == Stationery01) {
+                        if (Numbers < 0)
+                            this.value = Stationery01;
+                        else
+                            Stationery1s = Numbers;
+                    } else if (this == Stationery02) {
+                        if (Numbers < 0)
+                            this.value = Stationery02;
+                        else
+                            Stationery2s = Numbers;
+                    } else if (this == Life01) {
+                        if (Numbers < 0)
+                            this.value = Life01;
+                        else
+                            Life1s = Numbers;
+                    } else if (this == Life02) {
+                        if (Numbers < 0)
+                            this.value = Life02;
+                        else
+                            Life2s = Numbers;
+                    }
+
+                    money = book1.value * 150 + book2.value * 150 + Tool01.value * 100 + Tool02.value * 100 + Stationery01.value * 30 + Stationery02.value * 30 + Life01.value * 100 + Life02.value * 100; // 計算金額
+
+                    document.getElementById("subtotal").innerHTML = money; // 顯示金額
+                }
+
+            </script>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

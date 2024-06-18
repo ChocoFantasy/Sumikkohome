@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>申請會員</title>
+    <link href="css/member.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+</head>
+<script>
+
+
+</script>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <p>角落生物<span>會員申請區</span></p><br>
+            <div id="footer">
+                <a href="index.html"><img alt="footer" src="images/home_picture/002.png" width="100" height="100"></a>
+            </div>
+        </div>
+        <div id="Leftside">
+        </div>
+        <div id="rightside">
+            <form method="post" action="http://httpbin.org/post" method=post>
+                <table style="border:8px #AAAAAA;" width="100%" id="ta">
+                    <tr>
+                        <td id="one" width="50%">
+                            基本資料：<br>
+                            *姓名：<input type="text" name="UserName" required="required"><br>
+                            性別：<input type="radio" name="male" value="1">男
+                            <input type="radio" name="Female" value="2">女<br>
+                            生日：<input type="date" name="bday"><br>
+                            E-mail：<input type="email" name="emailaddress"><br>
+                        </td>
+                        <td id="two" width="50%">
+                            *電話：<input type="tel" name="phone" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" placeholder="0982-777-666" required> <br>
+                            *會員帳號：<input type="text" name="UserName" required="required"><br>
+                            *會員密碼：<input name="password" type="password" required="required"><br>
+                            *重新確認密碼：<input name="password" type="password" required="required"><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="three" width="50%">
+                            喜歡的角落小夥伴：
+                            　 <select name="partner">
+                                <optgroup label="主角群">
+                                    <option value="1">企鵝</option>
+                                    <option value="2">白熊</option>
+                                    <option value="3">炸豬排</option>
+                                    <option value="4">貓</option>
+                                    <option value="5">蜥蜴</option>
+                                <optgroup label="其他">
+                                    <option value="6">珍珠</option>
+                                    <option value="7">炸蝦尾</option>
+                                    <option value="8">雜草</option>
+                                    <option value="9">偽蝸牛</option>
+                                    <option value="10">灰塵</option>
+                            </select><br>
+                            從哪裡找到我們：
+                            <select name="where" size="4" multiple>
+                                <option value="1">網路</option>
+                                <option value="2">社群</option>
+                                <option value="3">朋友推薦</option>
+                                <option value="4">無意識點進來</option>
+                                <option value="5">特地找到我們</option>
+                            </select><br>
+                        </td>
+                        <td  id="four" width="50%">
+                            其他資訊：<br>
+                            　 喜歡我們的網站哪裡：<br>
+                            　 <input type="checkbox" name="" value="index.html">首頁
+                            　 <input type="checkbox" value="product">商品頁
+                            　 <input type="checkbox" value="picture">圖片欣賞
+                            　 <input type="checkbox" value="member">申請會員<br>
+                            　 <input type="checkbox" value="place">角落相關服務地點
+                            　 <br>
+                            　 給我們幾分：不喜歡1分<input type="range" min="1" max="5" value="51">喜歡5分<br>
+                            　 內容：<textarea name="Content" rows="5" cos="25"></textarea><br>
+                            　 <input type="submit" value="送出表單">
+                        </td>
+                    </tr>
+
+                    <hr>
+                    　
+
+                </table>
+            </form>
+
+        </div>
+    </div>
+</body>
+
+</html>

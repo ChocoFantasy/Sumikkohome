@@ -1,0 +1,107 @@
+/* 重置所有margin及padding */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* 不加這一段 右邊的行數會排到左邊的下面 */
+* {
+    box-sizing: border-box;
+}
+
+/* body 設定背景圖(色) */
+body {
+    background-color: #FFF1CF;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+#topnav {
+    overflow: hidden;
+    background-color: #7C7C7C;
+    color: #FFFFFF;
+    font-size: 100px;
+}
+
+/* 網頁內容最外層包裝, 主要是用margin來做左右置中 */
+#wrapper {
+    margin: 0 auto;
+    width: 1500px;
+    background-color: #E5E8BC;
+}
+
+/* =======標題區======== */
+
+#header {
+    height: 400px;
+    position: relative;
+    background-color: #EBFFCF;
+}
+
+#header p {
+    float: left;
+    background-color: #FFC694;
+    display: inline-block;
+    color: #fff;
+    font-size: 50px;
+    font-weight: normal;
+    margin: 0;
+    text-align: left;
+    width: 400px;
+}
+
+#header span {
+    background-color: #7C7C7C;
+    display: inline-block;
+    font-size: 50px;
+    padding: 10px;
+}
+
+#header h1 {
+    font-size: 30px;
+    padding: 10px;
+}
+
+
+
+/* =======表格區======== */
+
+/*#table ta{
+    table-layout:fixed;
+    width=100%;
+}*/
+
+.first {
+    background-size: 20%
+}
+ol{
+     list-style:none;
+}
+ul{
+     list-style:none;
+}
+
+ol li:hover {
+    background-color: #7C7C7C;
+    margin-left: 60px; 
+}
+
+ul li:hover {
+    background-color: #FFFFFF;
+    color: #7C7C7C;
+}
+
+#ss p{
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    
+}
+td{
+   border:2px solid #AAAAAA; 
+}
+
+#footer img{
+    width: 100px;
+    height:100px;
+    float: right;
+}
+
